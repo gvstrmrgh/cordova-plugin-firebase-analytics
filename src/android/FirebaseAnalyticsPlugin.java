@@ -73,15 +73,13 @@ public class FirebaseAnalyticsPlugin extends ReflectiveCordovaPlugin {
 
     @CordovaMethod
     private void resetAnalyticsData(CallbackContext callbackContext) {
-        this.firebaseAnalytics.resetAnalyticsData();
-
+        //this.firebaseAnalytics.resetAnalyticsData();
         callbackContext.success();
     }
 
     @CordovaMethod
     private void setEnabled(boolean enabled, CallbackContext callbackContext) {
         this.firebaseAnalytics.setAnalyticsCollectionEnabled(enabled);
-
         callbackContext.success();
     }
 
@@ -92,7 +90,6 @@ public class FirebaseAnalyticsPlugin extends ReflectiveCordovaPlugin {
             screenName,
             null
         );
-
         callbackContext.success();
     }
 }
